@@ -9,7 +9,7 @@
       </div>
       <div v-else>
         <div>
-          <TeamTable :team="team" />
+          <UsersTable :team="team" />
         </div>
       </div>
     </v-container>
@@ -19,7 +19,7 @@
 <script setup>
 import VButton from '@/components/button.vue';
 import Loading from '@/components/loading.vue';
-import TeamTable from '@/components/partials/teamTable.vue';
+import UsersTable from '@/components/partials/usersTable.vue';
 
 import { useMain } from '@/composables/index';
 const { team, loading } = useMain();
