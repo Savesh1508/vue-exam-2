@@ -1,6 +1,6 @@
 <template>
-  <v-layout class="!h-screen">
-    <v-main class="overflow-y-scroll">
+  <v-layout class="overflow-hidden">
+    <v-main class="!h-screen overflow-y-scroll">
       <v-container>
         <slot />
       </v-container>
@@ -10,3 +10,4 @@
 
 <script setup>
 </script>
+@/constants/routes/client

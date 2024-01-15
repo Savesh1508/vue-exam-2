@@ -5,7 +5,7 @@ import {
   apiFetchTeam,
   apiFetchComments,
   apiFetchBlog,
-} from '@/api/index'
+} from '@/api/client'
 import { errorToast, successToast } from '@/utils/toast';
 
 export const useClientStore = defineStore('client', {

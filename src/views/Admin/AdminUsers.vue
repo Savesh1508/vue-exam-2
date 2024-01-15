@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <section class="mt-6">
     <v-container>
       <div class="flex justify-center">
@@ -9,7 +10,7 @@
       </div>
       <div v-else>
         <div>
-          <UsersTable :team="team" />
+          <UsersTable :users="users" />
         </div>
       </div>
     </v-container>
@@ -17,10 +18,11 @@
 </template>
 
 <script setup>
-import VButton from '@/components/button.vue';
-import Loading from '@/components/loading.vue';
-import UsersTable from '@/components/partials/usersTable.vue';
+import Header from "@/components/partials/Header.vue";
 
-import { useMain } from '@/composables/index';
-const { team, loading } = useMain();
+import Loading from '@/components/loading.vue';
+import UsersTable from '@/components/Admin/usersTable.vue';
+
+import { useAdmin } from '@/composables/admin';
+const { users, loading } = useAdmin();
 </script>

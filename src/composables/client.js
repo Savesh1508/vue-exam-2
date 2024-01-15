@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia';
 import { onMounted } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
 
-export const useMain = () => {
+export const useClient = () => {
   const store = useClientStore();
   const router = useRouter();
   const route = useRoute();

@@ -3,7 +3,7 @@ import { signin } from '@/api/auth';
 import { errorToast } from '@/utils/toast';
 import decodeJwt from '@/functions/tokenParser';
 import router from '@/router';
-import { RT_LOGIN } from '@/constants/routes/auth';
+import { RT_HOME } from '../constants/routes/client';
 
 export const useAuthStore = defineStore('auth', {
   state: () => {
@@ -17,7 +17,7 @@ export const useAuthStore = defineStore('auth', {
       try {
         this.loading = true;
         const res = await signin(payload);
-        if (res?.data?.status !== 200) {
+        if (res?.status !== 200) {
           return;
         }
         this.loading = false;
@@ -35,13 +35,14 @@ export const useAuthStore = defineStore('auth', {
       }
     },
     saveUser(data) {
-      localStorage.setItem('token', data?.token);
-      this.user = data?.person;
+      localStorage.setItem('access_token', data?.token);
+      this.user = data;
     },
     clearUser() {
-      localStorage.removeItem('token');
+      localStorage.removeItem('access_token');
       this.user = null;
-      router.replace({ name: RT_LOGIN });
+      router.replace({ name: RT_HOME });
+      window.location.reload();
     }
   }
 });

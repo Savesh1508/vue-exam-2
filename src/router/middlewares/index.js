@@ -1,9 +1,9 @@
-import { ADMIN } from "../../constants/layouts";
+import { HOME } from "../../constants/layouts";
 
 export async function layoutMiddleware(route) {
   const { layout } = route.meta;
 
-  const layoutName = layout || ADMIN;
+  const layoutName = layout || HOME;
 
   const component = await import(`../../layouts/${layoutName}.vue`);
 

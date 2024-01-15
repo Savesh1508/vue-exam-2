@@ -2,8 +2,8 @@
   <v-table>
     <div class="flex flex-wrap">
       <div v-for="collection of collections" :key="collection.id" class="w-1/4 px-2 pb-4 cursor-pointer">
-        <div class="relative h-[275px] overflow-hidden">
-          <img :src="getAbsoluteImagePath(collection.img)" alt="Collection Image" class="w-full h-auto">
+        <div class="relative overflow-hidden">
+          <img :src="getAbsoluteImagePath(collection.img)" alt="Collection Image" class="w-full h-[30vh] object-cover">
         </div>
         <div class="mt-2 flex justify-center mb-3">
           {{ collection.name }}
@@ -14,8 +14,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
-
 const props = defineProps({
   collections: {
     type: Array,

@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <footer class="footer pb-12 pt-8 bg-white">
+  <footer class="footer pb-12 pt-8 bg-white flex justify-center">
     <div class="container flex gap-8 flex-wrap justify-center">
       <div class="w-72">
         <header class="header">About us</header>

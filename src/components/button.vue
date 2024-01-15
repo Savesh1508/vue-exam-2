@@ -1,23 +1,11 @@
 <template>
   <div class="flex">
-    <v-btn
-      v-if="isPrepend"
-      :prepend-icon="icon?.length ? icon : ''"
-      :color="color"
-      :class="class"
-      :elevation="elevation"
-      :disabled="disabled"
-    >
+    <v-btn v-if="isPrepend" :prepend-icon="icon?.length ? icon : ''" :color="color" :class="class" :elevation="elevation"
+      :disabled="disabled">
       <slot />
     </v-btn>
-    <v-btn
-      v-else
-      :append-icon="icon?.length ? icon : ''"
-      :color="color"
-      :class="class"
-      :elevation="elevation"
-      :disabled="disabled"
-    >
+    <v-btn v-else :append-icon="icon?.length ? icon : ''" :color="color" :class="class" :elevation="elevation"
+      :disabled="disabled">
       <slot />
     </v-btn>
   </div>
@@ -52,4 +40,5 @@ defineProps({
 });
 </script>
 
-<style lang="scss" scoped></style>
+
+<style scoped></style>

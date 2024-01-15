@@ -1,8 +1,7 @@
 const RT_ADMIN = 'Admin';
-const MT_ADMIN = 'Home';
+const MT_ADMIN = 'Admin';
 const RT_ADMIN_USERS = 'admin-users'
 const MT_ADMIN_USERS = 'Users'
-
 
 export {
   RT_ADMIN,
